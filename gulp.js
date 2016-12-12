@@ -20,7 +20,7 @@ gulp.task('minify_css',["clean"], function () {
 
 //压缩js
 gulp.task('minify_js',["clean"], function() {
-    var jsSrc = ['./src/*.js','!./lib/*.src.js'];
+    var jsSrc = ['./src/*.js'];
 
     return gulp.src(jsSrc)
         .pipe(concat('xx1.js'))    //合并所有js到all.js
@@ -33,7 +33,7 @@ gulp.task('minify_js',["clean"], function() {
 
 //执行压缩前，先删除以前压缩的文件
 gulp.task('clean', function() {
-    return del(['./css/index.css', './css/all.min.css', './src/xx1.js', './src/all.xx2.js'])
+    return del(['./css/index.css', './css/min.css', './src/xx1.js', './src/all.xx2.js'])
 });
 
 // 默认任务
