@@ -1,0 +1,3 @@
+function xx2() {
+    return 'xx2'
+}
